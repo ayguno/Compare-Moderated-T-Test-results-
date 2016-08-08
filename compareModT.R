@@ -8,7 +8,7 @@
 #The function will also attempt to plot the entire set of experiments into a single scatterplot
 #ModT_ClassV_match (chr) = csv table that matches ModT table file names (first column), with the respective Class vector files (second column) 
 
-# Functional as of 06/21/2016 (last update)
+
 
 
 compareModT<-function(ModT_ClassV_match) { 
