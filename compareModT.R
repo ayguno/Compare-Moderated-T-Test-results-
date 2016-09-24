@@ -8,7 +8,7 @@
 #The function will also attempt to plot the entire set of experiments into a single scatterplot
 #ModT_ClassV_match (chr) = csv table that matches ModT table file names (first column), with the respective Class vector files (second column) 
 
-
+# Functional as of 06/21/2016 (last update)
 
 
 compareModT<-function(ModT_ClassV_match) { 
@@ -154,8 +154,8 @@ par(mfrow=c(1,2))
 colfuncUP <- colorRampPalette(c("white","red"))
 heatmap.2(as.matrix(AvExpU), Rowv = F, Colv = F, trace='n',  
           dendrogram = 'none', cellnote = geneU, notecol='black',
-          margins=c(10,5), density.info = 'none',col=colfuncUP(100), 
-          symbreaks=F,symkey = F,keysize = 1,
+          margins=c(12,5), density.info = 'none',col=colfuncUP(100), 
+          symbreaks=F,symkey = F,keysize = 1,cexCol = 1,
           main="Top10 upregulated proteins ranked by p-value",srtCol = 45,
           ylab = "nominal p-value rank (Smallest-to-Largest)",
           key.title=F, key.xlab = "Average Expression (log2)", 
@@ -165,8 +165,8 @@ heatmap.2(as.matrix(AvExpU), Rowv = F, Colv = F, trace='n',
 colfuncDN <- colorRampPalette(c("blue","white"))
 heatmap.2(as.matrix(AvExpD), Rowv = F, Colv = F, trace='n', 
           dendrogram = 'none', cellnote = geneD, notecol='black',
-          margins=c(10,5), density.info = 'none',col=colfuncDN(100),
-          symbreaks=F,symkey = F, keysize = 1,
+          margins=c(12,5), density.info = 'none',col=colfuncDN(100),
+          symbreaks=F,symkey = F, keysize = 1, cexCol = 1,
           main="Top10 downregulated proteins ranked by p-value",srtCol = 45,
           ylab = "nominal p-value rank (Smallest-to-Largest)",
           key.title=F, key.xlab = "Average Expression (log2)")
